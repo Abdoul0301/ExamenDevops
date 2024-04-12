@@ -29,5 +29,13 @@ pipeline {
                 sh 'mvn package'
             }
         }
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    // Build Docker image
+                    sh 'docker build -t abdoul03/ExamenDevops .'
+                }
+            }
+        }
     }
 }
