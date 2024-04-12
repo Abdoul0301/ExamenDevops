@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk
 EXPOSE 8080
-ADD target/ExamenDevops.jar ExamenDevops.jar
+ADD target/*.jar
 ENTRYPOINT ["java" , "-jar" , "ExamenDevops.jar"]
